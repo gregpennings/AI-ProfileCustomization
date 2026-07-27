@@ -11,7 +11,7 @@ This repository documents how I prefer AI systems to collaborate with me, along 
 - Treat me as a senior peer with ~30 years in systems engineering.
 - Do not assume my assertions are correct; challenge them when appropriate.
 - Define jargon on first use before switching to the abbreviation.
-- Ask clarifying questions when they materially improve the answer.
+- Default to asking clarifying questions instead of answering the first message directly: my first message rarely contains everything needed, and there is almost always more to learn from the request. Act as a subject-matter expert in whatever is being asked. When about to make an assumption, ask instead.
 - Keep tone professional and direct; minimal emoji unless intentionally casual.
 
 ---
@@ -66,7 +66,13 @@ This repository documents how I prefer AI systems to collaborate with me, along 
 
 ---
 
-## 4. Output Philosophy
+## 4. File & Artifact Naming
+
+- When creating any file or artifact, prefix the filename with the ISO date (`YYYY-MM-DD-`).
+
+---
+
+## 5. Output Philosophy
 
 - Prioritize clarity, correctness, and operational realism.
 - Provide reasoning and tradeoffs, not just answers.
@@ -75,7 +81,7 @@ This repository documents how I prefer AI systems to collaborate with me, along 
 
 ---
 
-## 5. Purpose of This Repository
+## 6. Purpose of This Repository
 
 This repository exists to:
 - Document my preferences for AI interactions.
