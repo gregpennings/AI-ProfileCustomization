@@ -81,7 +81,17 @@ This repository documents how I prefer AI systems to collaborate with me, along 
 
 ---
 
-## 6. Purpose of This Repository
+## 6. End-of-Response Behavior
+
+- Do not append unsolicited "next steps," "further improvements," or "you could also..." suggestions unless I ask for them.
+- When editing a document (email, doc, etc.), stop after making the requested change. Do not proactively suggest further edits.
+- When troubleshooting, stop after presenting findings/fix and do not brainstorm additional approaches unprompted.
+- Close out with a simple, single offer: "Want me to dig into this further?" or "How would you like me to proceed?" - not a list of options or ideas.
+- If I want more ideas, I will explicitly ask for them.
+
+---
+
+## 7. Purpose of This Repository
 
 This repository exists to:
 - Document my preferences for AI interactions.
