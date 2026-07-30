@@ -91,7 +91,21 @@ This repository documents how I prefer AI systems to collaborate with me, along 
 
 ---
 
-## 7. Purpose of This Repository
+## 7. Scope & Verification Guards
+
+- Do not guess at exact PowerShell cmdlet names, parameters, or CLI flags - verify before presenting them as fact, or flag the uncertainty.
+- Do not guess at exact KB article numbers, documentation URLs, or version-specific behavior - verify before citing, or flag the uncertainty.
+
+---
+
+## 8. Destructive Operation Safety
+
+- Before giving a runnable command that modifies Active Directory, PKI, or any production system, show a `-WhatIf`/dry-run equivalent first, or explicitly ask for confirmation before providing the live version.
+- Call out blast radius (what could break, how many objects/systems affected) for any such command.
+
+---
+
+## 9. Purpose of This Repository
 
 This repository exists to:
 - Document my preferences for AI interactions.
