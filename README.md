@@ -1,4 +1,4 @@
-> **AI Interaction Files:** See [HUMAN_READABLE_SYSTEM_PROMPT.md](HUMAN_READABLE_SYSTEM_PROMPT.md) and [LLM_OPTIMIZED_SYSTEM_PROMPT.md](LLM_OPTIMIZED_SYSTEM_PROMPT.md) for the behavioral rules used when interacting with AI systems.
+> **AI Interaction Files:** See [HUMAN_READABLE_SYSTEM_PROMPT.md](HUMAN_READABLE_SYSTEM_PROMPT.md), [LLM_OPTIMIZED_SYSTEM_PROMPT.md](LLM_OPTIMIZED_SYSTEM_PROMPT.md), and [ChangeLog_TEMPLATE.md](ChangeLog_TEMPLATE.md) for the behavioral rules and change-tracking template used when interacting with AI systems.
 
 # Greg Pennings — Interaction Profile & Technical Background
 
@@ -98,10 +98,44 @@ This repository documents how I prefer AI systems to collaborate with me, along 
 
 ---
 
-## 8. Destructive Operation Safety
+## 8. Change Management Process
 
-- Before giving a runnable command that modifies Active Directory, PKI, or any production system, show a `-WhatIf`/dry-run equivalent first, or explicitly ask for confirmation before providing the live version.
-- Call out blast radius (what could break, how many objects/systems affected) for any such command.
+Any AI-suggested action that changes a system follows a Change Request (CR) lifecycle instead of ad-hoc execution. This applies broadly, not just AD/PKI: "production" / "user-affecting" means any system where a failure would affect customers, affect me directly, or affect my own device.
+
+### Classification (asked once, at the kickoff of a change)
+
+- **Standard** - a change type I've previously approved as repeatable and low-risk. Documented only; no approval gate; rollback (if needed) is also pre-approved.
+- **Normal** - default tier. Full CR lifecycle (below), ending with an explicit "ready to proceed?" before execution. After a successful Normal change, I'll be asked whether it should become Standard going forward.
+- **Emergency** - system stability is at risk, or interactivity is compromised (no screen, no keyboard, no visible output, etc.). Executed immediately with no real-time approval gate, since one may not be obtainable; documented fully after the fact.
+
+### CR lifecycle (Normal tier; documented retroactively for Emergency)
+
+1. Plan (exact commands or script)
+2. Risk assessment (reversibility, blast radius, severity if it fails)
+3. Rollback / backout plan
+4. Pre/post test design
+5. Dry-run (validate the plan against a non-prod or simulated target before it touches anything live)
+6. Time estimate (gut-feel is fine)
+7. CR write-up, using [ChangeLog_TEMPLATE.md](ChangeLog_TEMPLATE.md)
+8. Approval (per classification above)
+9. Execution
+10. Smoke test (fast post-execution check)
+11. Post-change test (fuller validation)
+12. Log actual results vs. the plan
+
+### Rollback approval
+
+- Standard: pre-approved along with the change itself.
+- Normal: requires a fresh, real-time approval request at the moment the rollback is actually needed - never inherited from the original CR approval.
+- Emergency: executed as needed to restore stability; documented after the fact.
+
+### Storage
+
+Each CR is its own markdown file, stored in a git repo, using [ChangeLog_TEMPLATE.md](ChangeLog_TEMPLATE.md) as the starting structure.
+
+### Success measurement
+
+Primary metric: how closely the dry-run's predicted outcome matches the actual smoke test result. Estimated vs. actual duration is tracked for information, not scored.
 
 ---
 
@@ -111,4 +145,3 @@ This repository exists to:
 - Document my preferences for AI interactions.
 - Provide a reference for consistent, high‑quality AI collaboration.
 - Serve as a baseline for system prompts, templates, and automation.
-
