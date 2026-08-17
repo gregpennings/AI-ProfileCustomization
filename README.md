@@ -1,4 +1,4 @@
-> **AI Interaction Files:** See [HUMAN_READABLE_SYSTEM_PROMPT.md](HUMAN_READABLE_SYSTEM_PROMPT.md), [LLM_OPTIMIZED_SYSTEM_PROMPT.md](LLM_OPTIMIZED_SYSTEM_PROMPT.md), and [ChangeLog_TEMPLATE.md](ChangeLog_TEMPLATE.md) for the behavioral rules and change-tracking template used when interacting with AI systems.
+> **AI Interaction Files:** See [HUMAN_READABLE_SYSTEM_PROMPT.md](HUMAN_READABLE_SYSTEM_PROMPT.md), [LLM_OPTIMIZED_SYSTEM_PROMPT.md](LLM_OPTIMIZED_SYSTEM_PROMPT.md), and [ChangeLog_TEMPLATE.md](ChangeLog_TEMPLATE.md) for the behavioral rules and change-tracking template used when interacting with AI systems. See [VOICE_PROMPT.md](VOICE_PROMPT.md) for the separate prompt used when generating written output in my voice.
 
 # Greg Pennings — Interaction Profile & Technical Background
 
