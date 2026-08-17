@@ -1,4 +1,4 @@
-> **AI Interaction Files:** See [HUMAN_READABLE_SYSTEM_PROMPT.md](HUMAN_READABLE_SYSTEM_PROMPT.md), [LLM_OPTIMIZED_SYSTEM_PROMPT.md](LLM_OPTIMIZED_SYSTEM_PROMPT.md), and [ChangeLog_TEMPLATE.md](ChangeLog_TEMPLATE.md) for the behavioral rules and change-tracking template used when interacting with AI systems. See [VOICE_PROMPT.md](VOICE_PROMPT.md) for the separate prompt used when generating written output in my voice.
+> **AI Interaction Files:** See [system-prompts/HUMAN_READABLE_SYSTEM_PROMPT.md](system-prompts/HUMAN_READABLE_SYSTEM_PROMPT.md), [system-prompts/LLM_OPTIMIZED_SYSTEM_PROMPT.md](system-prompts/LLM_OPTIMIZED_SYSTEM_PROMPT.md), and [system-prompts/ChangeLog_TEMPLATE.md](system-prompts/ChangeLog_TEMPLATE.md) for the behavioral rules and change-tracking template used when interacting with AI systems. See [voice-prompts/VOICE_PROMPT.md](voice-prompts/VOICE_PROMPT.md) for the separate prompt used when generating written output in my voice.
 
 # Greg Pennings — Interaction Profile & Technical Background
 
@@ -116,7 +116,7 @@ Any AI-suggested action that changes a system follows a Change Request (CR) life
 4. Pre/post test design
 5. Dry-run (validate the plan against a non-prod or simulated target before it touches anything live)
 6. Time estimate (gut-feel is fine)
-7. CR write-up, using [ChangeLog_TEMPLATE.md](ChangeLog_TEMPLATE.md)
+7. CR write-up, using [ChangeLog_TEMPLATE.md](system-prompts/ChangeLog_TEMPLATE.md)
 8. Approval (per classification above)
 9. Execution
 10. Smoke test (fast post-execution check)
@@ -131,7 +131,7 @@ Any AI-suggested action that changes a system follows a Change Request (CR) life
 
 ### Storage
 
-Each CR is its own markdown file, stored in a git repo, using [ChangeLog_TEMPLATE.md](ChangeLog_TEMPLATE.md) as the starting structure.
+Each CR is its own markdown file, stored in a git repo, using [ChangeLog_TEMPLATE.md](system-prompts/ChangeLog_TEMPLATE.md) as the starting structure.
 
 ### Success measurement
 

@@ -1,6 +1,6 @@
 # Write in My Voice — Prompt
 
-This is a standalone prompt for generating written output (messages, emails, docs) in my voice. It is separate from [HUMAN_READABLE_SYSTEM_PROMPT.md](HUMAN_READABLE_SYSTEM_PROMPT.md) / [LLM_OPTIMIZED_SYSTEM_PROMPT.md](LLM_OPTIMIZED_SYSTEM_PROMPT.md), which govern how AI systems interact with me, not how they write on my behalf. Use this prompt only when I've asked for output written in my voice.
+This is a standalone prompt for generating written output (messages, emails, docs) in my voice. It is separate from [HUMAN_READABLE_SYSTEM_PROMPT.md](../system-prompts/HUMAN_READABLE_SYSTEM_PROMPT.md) / [LLM_OPTIMIZED_SYSTEM_PROMPT.md](../system-prompts/LLM_OPTIMIZED_SYSTEM_PROMPT.md), which govern how AI systems interact with me, not how they write on my behalf. Use this prompt only when I've asked for output written in my voice.
 
 ---
 
